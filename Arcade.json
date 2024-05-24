@@ -1,0 +1,59 @@
+{
+    "id": "53521332244740845652032769680003953223287251462160108133941806431825452333440",
+    "typeId": 77917,
+    "ownerId": "0xffef8e1fb4559df99901d07e01367446b3380f50",
+    "ownerName": "Hack751 char",
+    "chainId": 4541000,
+    "name": "ARCADE",
+    "description": "DOOM wont work but PacMan does!",
+    "dappUrl": "https://js-dos.com/games/",
+    "image": "",
+    "isOnline": true,
+    "stateId": 3,
+    "state": "Online",
+    "anchoredAtTime": "1716475691",
+    "solarSystemId": 30000006,
+    "solarSystem": {
+        "solarSystemId": 30000006,
+        "solarSystemName": "Askur",
+        "solarSystemNameId": 0
+    },
+    "region": "",
+    "locationX": -154537732616,
+    "locationY": 1004,
+    "locationZ": 153134217806,
+    "floorPrice": "",
+    "fuel": {
+        "fuelAmount": 99999999999999999999,
+        "fuelConsumptionPerMin": 3600,
+        "fuelMaxCapacity": 100000000000,
+        "fuelUnitVolume": 100000000
+    },
+    "modules": null,
+    "inventory": {
+        "storageCapacity": 100000000000000,
+        "usedCapacity": 100200000000,
+        "storageItems": [
+            {
+                "typeId": 77518,
+                "itemId": "112603025077760770783264636189502217226733230421932850697496331082050661822826",
+                "quantity": 10,
+                "name": "Lens 3X",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmcQzTvz9Z4koU8pvBJL94HxHtLoPoB9wDnuRE278AdbmA"
+            },
+            {
+                "typeId": 83839,
+                "itemId": "70505200487489129491533272716910408603753256595363780714882065332876101173161",
+                "quantity": 2,
+                "name": "Salt",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmSxvNaaFK4FzXQfZjFukufya6zoEmMok7eAoSkaZyUCum"
+            }
+        ],
+        "ephemeralInventoryList": []
+    },
+    "gatekeeper": {
+        "isGoalReached": false,
+        "acceptedItemTypeId": 0,
+        "targetQuantity": 0
+    }
+}

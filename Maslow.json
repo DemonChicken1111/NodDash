@@ -1,0 +1,129 @@
+{
+    "id": "45228697695947564033082854924954193006092773360381611920298456273008413001782",
+    "typeId": 77917,
+    "ownerId": "0xa919c7f248343a068925ea707b6b21af2eac1666",
+    "ownerName": "Hackathon87 char",
+    "chainId": 4541000,
+    "name": "Maslow's Pyramid",
+    "description": "Test of Maslow's Pyramid",
+    "dappUrl": "https://pa-hack.web.app/",
+    "image": "",
+    "isOnline": true,
+    "stateId": 3,
+    "state": "Online",
+    "anchoredAtTime": "1716487243",
+    "solarSystemId": 30000006,
+    "solarSystem": {
+        "solarSystemId": 30000006,
+        "solarSystemName": "Askur",
+        "solarSystemNameId": 0
+    },
+    "region": "",
+    "locationX": -154537747110,
+    "locationY": 12502,
+    "locationZ": 153134404530,
+    "floorPrice": "",
+    "fuel": {
+        "fuelAmount": 139999999999999999999,
+        "fuelConsumptionPerMin": 3600,
+        "fuelMaxCapacity": 100000000000,
+        "fuelUnitVolume": 100000000
+    },
+    "modules": null,
+    "inventory": {
+        "storageCapacity": 100000000000000,
+        "usedCapacity": 2011180000000,
+        "storageItems": [
+            {
+                "typeId": 83901,
+                "itemId": "103505512615359487231719201597602299494999564406465865832052161086038969351862",
+                "quantity": 1,
+                "name": "",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/"
+            },
+            {
+                "typeId": 77803,
+                "itemId": "101566323435732540889167848324699621054641644394678449818508966615754276560108",
+                "quantity": 1,
+                "name": "Silicates",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmQY6jhXLiW5iVrqpuAnszn7WhyTZmzfah5xvK47GghZYP"
+            },
+            {
+                "typeId": 77800,
+                "itemId": "54949089622078329307676094148632864879426651785510047822079265544250486580483",
+                "quantity": 1000,
+                "name": "Common Ore",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmPaoswuCukLNf6UDgjwoHPWGMRjTpAuc1L3vHuMjAt63Z"
+            },
+            {
+                "typeId": 77811,
+                "itemId": "9540969374646031328134197690309428632894452754236413416084198707556493884019",
+                "quantity": 1001,
+                "name": "Carbonaceous Ore",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmZpbqzkFRe6K8S6ZLuz98HiiRZSn3KvgveCwSajTV8nEj"
+            },
+            {
+                "typeId": 77802,
+                "itemId": "68779146033766459620749640621600227429813312080304321593274000205243697544338",
+                "quantity": 1,
+                "name": "Light Metals",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmPK3pbR6UQPqUYrwKJG2wu36dhcPLM8k4jSDs1puzZigG"
+            },
+            {
+                "typeId": 82128,
+                "itemId": "57256065505311134037223333078440100567438656522034042071174470184567596592842",
+                "quantity": 1,
+                "name": "AC Gyrojet Ammo 1 (S) ",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmQafBkjeZ14hYej1YxgspVCWfu74vksPVqncoJ9CR8UNQ"
+            },
+            {
+                "typeId": 77804,
+                "itemId": "67539460570141130210602804740741713520841609498087038683097815612825937901250",
+                "quantity": 1,
+                "name": "Carbonaceous Materials",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmbjVBHsBZ7WphzvUh4V9PYQrKj9aCTonVYX9oYFUNUE1v"
+            },
+            {
+                "typeId": 78423,
+                "itemId": "4849213586578758516979693453515271935121030808792700292547098743263487050031",
+                "quantity": 1,
+                "name": "Water Ice",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmR5FS5u7YKK5m6tHmULBXJdKjWbC1NT1RFfGUASveQZ69"
+            },
+            {
+                "typeId": 77801,
+                "itemId": "109799403725196635337378305689225893760318248957057818198043308387201350662753",
+                "quantity": 1,
+                "name": "Iron-Nickel Metals",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/Qmcu5r481qWFdpr3DaCrHxvy83nn9jHkLqza3hNZkrWsiq"
+            },
+            {
+                "typeId": 77805,
+                "itemId": "74173010444644206227287422791905021192310269495960358698187435007972125956250",
+                "quantity": 1,
+                "name": "Precious Metals and Elements",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmfN4nXCR2RHZFsozrXmEfyhNeiZYn9dqEfDaGJ4ZAnbKH"
+            },
+            {
+                "typeId": 83839,
+                "itemId": "70505200487489129491533272716910408603753256595363780714882065332876101173161",
+                "quantity": 1,
+                "name": "Salt",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmSxvNaaFK4FzXQfZjFukufya6zoEmMok7eAoSkaZyUCum"
+            },
+            {
+                "typeId": 77518,
+                "itemId": "112603025077760770783264636189502217226733230421932850697496331082050661822826",
+                "quantity": 1,
+                "name": "Lens 3X",
+                "image": "https://devnet-data-ipfs-gateway.nursery.reitnorf.com/ipfs/QmcQzTvz9Z4koU8pvBJL94HxHtLoPoB9wDnuRE278AdbmA"
+            }
+        ],
+        "ephemeralInventoryList": []
+    },
+    "gatekeeper": {
+        "isGoalReached": false,
+        "acceptedItemTypeId": 0,
+        "targetQuantity": 0
+    }
+}
