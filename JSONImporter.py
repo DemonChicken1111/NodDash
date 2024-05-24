@@ -5,7 +5,7 @@ BaseURL = "https://blockchain-gateway-test.nursery.reitnorf.com/"
 SmartDeployableURL = "smartdeployables/"
 TypeURL = "types/"
 
-def ExportJSONFile(FileName, URLParam, ID):
+def ImportJSONFile(FileName, URLParam, ID):
 
 	if URLParam == "-S":
 		URLAddon = SmartDeployableURL 
