@@ -17,6 +17,6 @@ def ImportJSONFile(FileName, URLParam, ID):
 	r = requests.get(BaseURL+URLAddon+ID)
 	request = r.json()
 	
-	with open(FileName, "w") as outfile:
+	with open("JSON/" + FileName + ".json", "w") as outfile:
 		outfile.write(json.dumps(request, indent=4))
 
