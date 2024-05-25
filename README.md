@@ -7,7 +7,8 @@
 - [x] JSONImporting
 - [ ] Activity Monitoring 
 - [ ] UI
-- [ ] Logging/storing data
+- [ ] Logging data
+- [x] Grabbing and storing data
 - [ ] Graphing data (Or framework for furthur development)
 - [ ] Configuration Options
 - [ ] Dependancy setup script
