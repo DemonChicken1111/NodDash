@@ -4,6 +4,7 @@ import datetime
 from time import sleep
 from os import walk
 import functools
+from itertools import zip_longest
 
 #Opens Config file
 with open("config.yaml", "r") as file:
@@ -24,26 +25,28 @@ def JSONStreamer():
 def Logger():
 
 	logFile = open("log.txt", "a")
-	fileNames = next(walk("JSON/"), (None, None, []))[2]
+	fileNames = [next(walk("JSON/"), (None, None, []))[2]]
 
 	with open("log.txt", "r") as log:
 		readLog = log.read()
-
-	#print(readLog.splitlines()[0])
 
 	logList = readLog.splitlines()
 
 	fileNames.sort()
 	logList.sort()
 
+	#print(logList)
+	#print(fileNames)
+
 	#Broken
-	for i in range(len(fileNames)):
-		for j in range(len(logList)):
-			if (fileNames[i] == logList[j]):
-				print("Already exists")
-				#logFile.write(fileNames[i][:25] + ": " + fileNames[i][25:] + " added \n")
-			else:
-				print("in else")
+	for i,(f, l) in enumerate(zip_longest(fileNames, logList)):
+		
+		if (f[i][:25] + ": " + f[i][25:] + " added ") != l[i]:
+			print("writing new file")
+			#logFile.write(fileNames[i][:25] + ": " + fileNames[i][25:] + " added \n")
+		if (f[i][:25] + ": " + f[i][25:] + " added ") == l[i]:
+			print("Already exists")
+				
 
 	logFile.close()
 	readLog.close()

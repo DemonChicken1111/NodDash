@@ -8,7 +8,7 @@
 - [ ] Activity Monioring 
 	- [ ] Integrate logging of updates
 - [ ] UI
-- [x] Logging data (Basic)
+- [ ] Logging data (Basic)
 - [x] Grabbing and storing data
 - [ ] Graphing data (Or framework for furthur development)
 - [ ] Configuration Options
