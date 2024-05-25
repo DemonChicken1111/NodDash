@@ -3,8 +3,6 @@ import JSONImporter
 import datetime
 from time import sleep
 from os import walk
-import functools
-from itertools import zip_longest
 import threading
 
 #Opens Config file
@@ -13,18 +11,24 @@ with open("config.yaml", "r") as file:
 
 t = datetime.datetime.now()
 
-#Set in loop
-	#Imports Data and attaches time stamp to file. Executes every x seconds
-def JSONStreamer():
 
-	for i, obj in config.items():
-		for y in obj:
-			fileName = t.strftime("%c") + " " + obj[y]
-			JSONImporter.ImportJSONFile(fileName, obj[y])
+
+class Logger():
+	
+	def __init__(self):
+
+		
+	#Imports Data and attaches time stamp to file. Executes every x seconds
+	def JSONStreamer():
+		
+		for i, obj in config.items():
+			for y in obj:
+				fileName = t.strftime("%c") + " " + obj[y]
+				JSONImporter.ImportJSONFile(fileName, obj[y])
+
 
 #Creates human readable log of import
-def Logger():
-
+"""def Logger():
 	logFile = open("log.txt", "a")
 	fileNames = next(walk("JSON/"), (None, None, []))[2]
 
@@ -47,11 +51,12 @@ def Logger():
 			#logFile.write(fileNames[i][:25] + ": " + fileNames[i][25:] + " added \n")
 		if (f[i][:25] + ": " + f[i][25:] + " added ") == l[i]:
 			print("Already exists")
+	
 				
 
 	logFile.close()
 	readLog.close()
-
+"""
 			
 
 def main():
@@ -60,6 +65,8 @@ def main():
 	thread2 = threading.Thread()
 
 	t1.start()
+
+
 	t1.join()
 
 if __name__ == "__main__":
