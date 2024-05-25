@@ -5,6 +5,7 @@ from time import sleep
 from os import walk
 import functools
 from itertools import zip_longest
+import threading
 
 #Opens Config file
 with open("config.yaml", "r") as file:
@@ -25,7 +26,7 @@ def JSONStreamer():
 def Logger():
 
 	logFile = open("log.txt", "a")
-	fileNames = [next(walk("JSON/"), (None, None, []))[2]]
+	fileNames = next(walk("JSON/"), (None, None, []))[2]
 
 	with open("log.txt", "r") as log:
 		readLog = log.read()
@@ -54,7 +55,12 @@ def Logger():
 			
 
 def main():
-	Logger()
+	
+	thread1 = threading.Thread(target=Logger)
+	thread2 = threading.Thread()
+
+	t1.start()
+	t1.join()
 
 if __name__ == "__main__":
 	main()
