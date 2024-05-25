@@ -5,9 +5,10 @@
 ### TO-DO LIST
 
 - [x] JSONImporting
-- [ ] Activity Monitoring 
+- [ ] Activity Monioring 
+	- [ ] Integrate logging of updates
 - [ ] UI
-- [ ] Logging data
+- [x] Logging data (Basic)
 - [x] Grabbing and storing data
 - [ ] Graphing data (Or framework for furthur development)
 - [ ] Configuration Options

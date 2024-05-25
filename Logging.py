@@ -4,7 +4,7 @@ import JSONImporter
 import threading
 import datetime
 from time import sleep
-
+from os import walk
 
 #Opens Config file
 with open("config.yaml", "r") as file:
@@ -22,7 +22,18 @@ def JSONStreamer():
 			JSONImporter.ImportJSONFile(fileName, obj[y])
 
 #Creates human readable log of import
+def Logger():
+
+	logFile = open("log.txt", "a")
+	fileNames = next(walk("JSON/"), (None, None, []))[2]
+
+	for i in range(len(fileNames)):
+		logFile.write(fileNames[i][:25] + ": " + fileNames[i][25:] + " added \n")
 
 
+def main():
+	
+	Logger()
 
-JSONStreamer()
+if __name__ == "__main__":
+	main()
