@@ -33,7 +33,7 @@ def Logger():
 
 def main():
 	
-	Logger()
+	Logger()`
 
 if __name__ == "__main__":
 	main()
