@@ -1,7 +1,5 @@
 import yaml
-import requests
 import JSONImporter
-import threading
 import datetime
 from time import sleep
 from os import walk
@@ -27,13 +25,30 @@ def Logger():
 	logFile = open("log.txt", "a")
 	fileNames = next(walk("JSON/"), (None, None, []))[2]
 
-	for i in range(len(fileNames)):
-		logFile.write(fileNames[i][:25] + ": " + fileNames[i][25:] + " added \n")
+	with open("log.txt", "r") as log:
+		readLog = log.read()
 
+	#print(readLog.splitlines()[0])
+
+
+	#Broken
+	for i in range(len(fileNames)):
+		for o in range(len(readLog.splitlines())):
+			compare = fileNames[i][:25] + ": " + fileNames[i][25:] + " added "
+			
+			if compare == readLog.splitlines()[o]:
+				print("Already exists")
+				#logFile.write(fileNames[i][:25] + ": " + fileNames[i][25:] + " added \n")
+			else:
+				print("in else")
+
+	logFile.close()
+	readLog.close()
+
+			
 
 def main():
-	
-	Logger()`
+	Logger()
 
 if __name__ == "__main__":
 	main()
