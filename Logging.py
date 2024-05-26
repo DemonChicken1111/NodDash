@@ -5,69 +5,72 @@ from time import sleep
 from os import walk
 import threading
 
+	
 #Opens Config file
 with open("config.yaml", "r") as file:
 	config = yaml.safe_load(file)
 
 t = datetime.datetime.now()
 
-
-
 class Logger():
-	
+
 	def __init__(self):
+		self.logging = ""
 
 		
 	#Imports Data and attaches time stamp to file. Executes every x seconds
-	def JSONStreamer():
-		
+	def JSONStreamer(self):
+
 		for i, obj in config.items():
 			for y in obj:
 				fileName = t.strftime("%c") + " " + obj[y]
 				JSONImporter.ImportJSONFile(fileName, obj[y])
+		self.logging = 
 
 
-#Creates human readable log of import
-"""def Logger():
-	logFile = open("log.txt", "a")
-	fileNames = next(walk("JSON/"), (None, None, []))[2]
+	def Logging(self):
 
-	with open("log.txt", "r") as log:
-		readLog = log.read()
+		logFile = open("log.txt", "a")
+		logEntry = self.logging
 
-	logList = readLog.splitlines()
+		if logEntry != "":
+			logFile.write(logEntry)
+			print("logged")
+		else:
+			print("else")
 
-	fileNames.sort()
-	logList.sort()
 
-	#print(logList)
-	#print(fileNames)
+def streamTask(lock):
+	#Task for a thread, Calls JSONStreamer every 10 seconds
 
-	#Broken
-	for i,(f, l) in enumerate(zip_longest(fileNames, logList)):
+	while True:
+		lock.acquire()
+		Logger().JSONStreamer()
+		lock.release()
+		print("Sleeping..")
+		sleep(10)
 		
-		if (f[i][:25] + ": " + f[i][25:] + " added ") != l[i]:
-			print("writing new file")
-			#logFile.write(fileNames[i][:25] + ": " + fileNames[i][25:] + " added \n")
-		if (f[i][:25] + ": " + f[i][25:] + " added ") == l[i]:
-			print("Already exists")
-	
-				
 
-	logFile.close()
-	readLog.close()
-"""
-			
+def logTask(lock):
+	#Task for a thread, Calls Logging function
+
+	while True:
+		lock.acquire()
+		Logger().Logging()
+		lock.release()
 
 def main():
-	
-	thread1 = threading.Thread(target=Logger)
-	thread2 = threading.Thread()
+	Logs = Logger()
+	lock = threading.Lock()
 
-	t1.start()
+	thread1 = threading.Thread(target=streamTask, args=(lock,))
+	thread2 = threading.Thread(target=logTask, args=(lock,))
 
+	thread1.start()
+	thread2.start()
 
-	t1.join()
+	thread1.join()
+	thread2.join()
 
 if __name__ == "__main__":
 	main()

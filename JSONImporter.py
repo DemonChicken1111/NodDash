@@ -9,7 +9,7 @@ typeURL = "types/"
 def ImportJSONFile(FileName, ID):
 
 	URLAddon = smartDeployableURL 
-	print(ID)
+	print("Getting:" + ID[:5])
 
 	r = requests.get(baseURL+URLAddon+ID)
 	request = r.json()
