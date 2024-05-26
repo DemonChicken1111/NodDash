@@ -25,10 +25,10 @@ class Logger():
 			for y in obj:
 				fileName = t.strftime("%c") + " " + obj[y]
 				JSONImporter.ImportJSONFile(fileName, obj[y])
-		self.logging = 
+		
+		self.logging = "File fetched"
 
-
-	def Logging(self):
+	def Logging(self): #Still wont work :(
 
 		logFile = open("log.txt", "a")
 		logEntry = self.logging
@@ -37,7 +37,8 @@ class Logger():
 			logFile.write(logEntry)
 			print("logged")
 		else:
-			print("else")
+			print(logEntry + "else")
+			pass
 
 
 def streamTask(lock):
