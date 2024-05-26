@@ -11,27 +11,24 @@ with open("config.yaml", "r") as file:
 	config = yaml.safe_load(file)
 
 t = datetime.datetime.now()
+logging = ""
 
 class Logger():
 
-	def __init__(self):
-		self.logging = ""
-
-		
 	#Imports Data and attaches time stamp to file. Executes every x seconds
-	def JSONStreamer(self):
+	def JSONStreamer():
 
 		for i, obj in config.items():
 			for y in obj:
 				fileName = t.strftime("%c") + " " + obj[y]
 				JSONImporter.ImportJSONFile(fileName, obj[y])
 		
-		self.logging = "File fetched"
+		logging = "SmartDeployables fetched"
 
-	def Logging(self): #Still wont work :(
+	def Logging(): #Still wont work :(, gets stuck in else
 
 		logFile = open("log.txt", "a")
-		logEntry = self.logging
+		logEntry = logging
 
 		if logEntry != "":
 			logFile.write(logEntry)
