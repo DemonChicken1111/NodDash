@@ -17,7 +17,7 @@ class Logger():
 	#Imports Data and attaches time stamp to file. Executes every x seconds
 	def JSONStreamer():
 
-		for i, obj in config.items():
+		for i, obj in config['deployables'].items():
 			for y in obj:
 				fileName = t.strftime("%c") + " " + obj[y]
 				JSONImporter.ImportJSONFile(fileName, obj[y])
@@ -41,16 +41,17 @@ class Logger():
 
 		logging = ""
 
-def customLogging(thingToLog):
+def customLogging(thingToLog, newLine):
 
 	logFile = open("log.txt", "a")
 	logEntry = thingToLog
 
 	if logEntry == "":
 		pass
-	else:
+	if newLine == True:
 		logFile.write(logEntry + "\n")
-
+	else:
+		logFile.write(logEntry)
 
 def streamTask(lock):
 	#Task for a thread, Calls JSONStreamer every 10 seconds

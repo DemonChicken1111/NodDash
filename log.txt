@@ -1,3 +1,0 @@
-No differences found in the specified keys. 2087016
-Differences found in the following keys:
-inventory: 1104052, 1104052
