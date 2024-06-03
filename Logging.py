@@ -2,7 +2,6 @@ import yaml
 import JSONImporter
 import datetime
 from time import sleep
-from os import walk
 import threading
 
 	
