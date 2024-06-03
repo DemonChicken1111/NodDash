@@ -25,7 +25,7 @@ class Logger():
 		global logging
 		logging = "Smart Deployables Fetched"
 
-	def Logging(): 
+	def LoggingJSONFetch(): 
 
 		global logging
 		logFile = open("log.txt", "a")
@@ -41,6 +41,16 @@ class Logger():
 
 		logging = ""
 
+def customLogging(thingToLog):
+
+	logFile = open("log.txt", "a")
+	logEntry = thingToLog
+
+	if logEntry == "":
+		pass
+	else:
+		logFile.write(logEntry + "\n")
+
 
 def streamTask(lock):
 	#Task for a thread, Calls JSONStreamer every 10 seconds
@@ -54,13 +64,13 @@ def streamTask(lock):
 		
 
 def logTask(lock):
-	#Task for a thread, Calls Logging function
+	#Task for a thread, Calls LoggingJSONFetch function
 	
 	while True:
 		lock.acquire()
 
 		if threading.current_thread().name != "thread1":
-			Logger.Logging()
+			Logger.LoggingJSONFetch()
 			lock.release()
 
 def main():

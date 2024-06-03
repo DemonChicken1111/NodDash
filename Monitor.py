@@ -3,6 +3,7 @@ import yaml
 import datetime
 from time import sleep
 import os
+import Logging
 
 def getFilesToCompare():
 
@@ -59,17 +60,22 @@ def compareJSONFilesWithKeys(fileOnePath, fileTwoPath, keysToCompare):
             differences[key] = {"file1": json1.get(key), "file2": json2.get(key)}
 
     if differences:
-        print("Differences found in the following keys:")
+        Logging.customLogging("Differences found in the following keys:")
         for key, values in differences.items():
-            print(f"{key}: File 1 - {values['file1']}, File 2 - {values['file2']}")
+            Logging.customLogging(f"{key}: {fileOnePath[30:37]}, {fileTwoPath[30:37]}")
     else:
-        print("No differences found in the specified keys.")
+        Logging.customLogging(f"No differences found in the specified keys. {fileOnePath[30:37]}")
 
 #keysToCompare = ["key1", "key2", "key3"]  # Add the keys you want to compare
 def main():
 
+    inputDict = getFileValues()
+
+    #compareJSONFilesWithKeys("JSON/Sat May 25 18:16:07 2024 20870167059283674881460196312638513718344889103935257728507913505184704656636.json", "JSON/Fri May 24 22:21:38 2024 20870167059283674881460196312638513718344889103935257728507913505184704656636.json", keysToCompare = ["inventory"])
+
     #for i in range(len(getFileValues())):
-    compareJSONFilesWithKeys(getFileValues()['1'][0], getFileValues()['1'][1], "ephemeralInventoryList")
+    for key, val in inputDict.items():
+        compareJSONFilesWithKeys(val[0], val[1], keysToCompare = ["inventory"])
 
 if __name__ == "__main__":
     main()
