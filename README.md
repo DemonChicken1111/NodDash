@@ -8,11 +8,13 @@
 ### TO-DO LIST
 
 - [x] JSONImporting
-- [ ] Activity Monioring 
-	- [ ] Integrate logging of updates
+- [x] Activity Monioring 
+	- [x] Integrate logging of updates
 - [ ] UI
 - [x] Logging data (Basic)
 - [x] Grabbing and storing data
-- [ ] Graphing data (Or framework for furthur development)
+	- [ ] Deleting old files
+- [ ] Creating database
+- [ ] Graphing data from database(Or framework for furthur development)
 - [ ] Configuration Options
 - [ ] Dependancy setup script
