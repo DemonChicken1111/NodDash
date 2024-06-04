@@ -25,3 +25,4 @@
 	- [ ] Graphing data from db's (Or framework for furthur development)
 - [x] Configuration Options / Easy code changes
 - [ ] Dependancy setup script
+- [ ] Presentation + Docs
