@@ -3,22 +3,23 @@
 
  ![Project Awakening Logo](https://harbor-webapp.s3.us-east-2.amazonaws.com/projects/6/global/logo.png)
 
- ### FEATURES
+ ## FEATURES
 
  NodDash is a fully featured activity and data collection backend which utilizes the JSON API provided by Projects Awakening Dev team. You can use NodDash to find your next kill, monitor selling data, or other various stats on any smart deployable in Project Awakening. NodDash is very configurable and code changes are encouraged for users who wish to expand functionality or cutomization.
 
- Features:
- 	- JSON API importing
- 	- Activity monitoring 
- 	- User confiurable data extraction
- 	- Fully user controlled
- 	- Easy to use custom database 
- 	- Data visualization
- 	- GUI dashboard
- 	- Hardware flexibility
+ ### Features:
+
+ - JSON API importing
+ - Activity monitoring 
+ - User confiurable data extraction
+ - Fully user controlled
+ - Easy to use custom database 
+ - Data visualization
+ - GUI dashboard
+ - Hardware flexibility
 
 
- ### INSTALLATION AND DEPLOYMENT
+ ## INSTALLATION AND DEPLOYMENT
 
 
 
