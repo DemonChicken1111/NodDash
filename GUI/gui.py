@@ -11,7 +11,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"/home/admin/Documents/PyBackEnd/Python-Backend-For-PA/build/assets/frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r"./assets/frame0")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -20,6 +20,7 @@ def relative_to_assets(path: str) -> Path:
 
 window = Tk()
 
+window.title("NodDash")
 window.geometry("1920x1080")
 window.configure(bg = "#282828")
 
@@ -245,5 +246,9 @@ image_13 = canvas.create_image(
     154.0,
     image=image_image_13
 )
+
+
+
+
 window.resizable(False, False)
 window.mainloop()

@@ -4,6 +4,10 @@ import datetime
 from time import sleep
 import os
 import Logging
+from tinydb import TinyDB, Query
+
+db = TinyDB('pingdb.json')
+x = datetime.datetime.now()
 
 #Opens Config file
 with open("config.yaml", "r") as file:
@@ -64,9 +68,13 @@ def compareJSONFilesWithKeys(fileOnePath, fileTwoPath, keysToCompare):
         Logging.customLogging("Differences found in the following keys:", False)
         for key, values in differences.items():
             Logging.customLogging(f" {key}: {fileOnePath[30:37]}, {fileTwoPath[30:37]}", True)
+
+            location = json1.get("solarSystem").get("solarSystemName")
+            time = x.strftime("%c")
+
+            db.insert({'time': time, 'location': location, 'key': key})
     else:
         Logging.customLogging(f"No differences found in the specified keys. {fileOnePath[30:37]}", True)
-        #Call pinging function? Or hook into some ping info on GUI?
 
 def main():
 
