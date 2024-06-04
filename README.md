@@ -24,5 +24,5 @@
 	- [x] Pings sent to seperate db in monitor
 	- [ ] Graphing data from db's (Or framework for furthur development)
 - [x] Configuration Options / Easy code changes
-- [ ] Dependancy setup script
+- [x] Dependancy setup script
 - [ ] Presentation + Docs
