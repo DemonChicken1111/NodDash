@@ -10,7 +10,8 @@ db = TinyDB('pingdb.json')
 x = datetime.datetime.now()
 
 #Opens Config file
-with open("config.yaml", "r") as file:
+with open("configMonitor.yaml", "r") as fileMon, open("config.yaml", "r") as file:
+    configMonitor = yaml.safe_load(fileMon)
     config = yaml.safe_load(file)
 
 
@@ -72,14 +73,18 @@ def compareJSONFilesWithKeys(fileOnePath, fileTwoPath, keysToCompare):
             location = json1.get("solarSystem").get("solarSystemName")
             time = x.strftime("%c")
 
+            #Could be issue if multiple empheralInventories are opened between intervals
+            #Seems to be edge case though and willing to allow it for sake of time
             db.insert({'time': time, 'location': location, 'key': key})
+
+
     else:
         Logging.customLogging(f"No differences found in the specified keys. {fileOnePath[30:37]}", True)
 
 def main():
 
     keysToCompare = [] 
-    for i, obj in config['keyvalues'].items():
+    for i, obj in configMonitor['keyvalues'].items():
         keysToCompare.append(obj)
 
     inputDict = getFileValues()

@@ -12,14 +12,17 @@ with open("config.yaml", "r") as file:
 t = datetime.datetime.now()
 logging = ""
 
+def currentTime():
+		return t.strftime("%c")
+
 class Logger():
 
 	#Imports Data and attaches time stamp to file. Executes every x seconds
 	def JSONStreamer():
 
-		for i, obj in config['deployables'].items():
+		for i, obj in config.items():
 			for y in obj:
-				fileName = t.strftime("%c") + " " + obj[y]
+				fileName = currentTime() + " " + obj[y]
 				JSONImporter.ImportJSONFile(fileName, obj[y])
 		
 		global logging
@@ -33,7 +36,7 @@ class Logger():
 
 		if logEntry != "":
 			logFile.write(logEntry + ": " + t.strftime("%c") + "\n")
-		#	print("logged")
+			#print("logged")
 			pass
 		else:
 		#	print(logEntry + "else")
@@ -60,8 +63,9 @@ def streamTask(lock):
 		lock.acquire()
 		Logger.JSONStreamer()
 		lock.release()
-		#print("Sleeping..")
+		print("Sleeping..")
 		sleep(30)
+		print("Starting..")
 		
 
 def logTask(lock):
