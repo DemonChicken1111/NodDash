@@ -35,7 +35,7 @@
 
  If you are on linux you can download python and pip via your package manger in the terminal
 
- There is no storage requirements however if you are going to be running this for an extended period of time I would consider having a good amount of free storage.. You can also edit Cleanup.py and how often it runs if you need. 
+ There is no storage requirements however if you are going to be running this for an extended period of time I would consider having a good amount of free storage.. You can also edit `Cleanup.py` and how often it runs in `main.py` if you need. 
 
  ### Clone or Download the repository
 
