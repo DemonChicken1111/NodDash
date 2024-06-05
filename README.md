@@ -19,7 +19,7 @@
 
  - JSON API importing
  - Activity monitoring 
- - User confiurable data extraction
+ - User configurable data extraction
  - Fully user controlled
  - Easy to use custom database 
  - Data visualization
