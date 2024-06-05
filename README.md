@@ -4,11 +4,11 @@
  </br>
  </br>
  </br>
-
- ![Project Awakening Logo](https://harbor-webapp.s3.us-east-2.amazonaws.com/projects/6/global/logo.png)
+ 
+ <p style="text-align: center"><img src="https://harbor-webapp.s3.us-east-2.amazonaws.com/projects/6/global/logo.png"></p>
  
  </br>
- 
+
  ## **FEATURES**
 
  NodDash is a fully featured activity and data collection backend which utilizes the JSON API provided by Projects Awakening Dev team. You can use NodDash to find your next kill, monitor selling data, or other various stats on any smart deployable in Project Awakening. NodDash is very configurable and code changes are encouraged for users who wish to expand functionality or cutomization.
