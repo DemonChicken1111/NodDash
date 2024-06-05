@@ -1,5 +1,5 @@
 # **NodDash**
- <p style="text-align: center;">A Python backend utility for smart deployables in [Project Awakening](https://phase3.projectawakening.io/).</p>
+ A Python backend utility for smart deployables in [Project Awakening](https://phase3.projectawakening.io/).
 
 
 
