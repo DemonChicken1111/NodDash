@@ -4,7 +4,7 @@
  </br>
  </br>
  </br>
- 
+
  <p style="text-align: center"><img src="https://harbor-webapp.s3.us-east-2.amazonaws.com/projects/6/global/logo.png"></p>
  
  </br>
@@ -41,7 +41,7 @@
 - [x] UI
 - [x] Logging data (Basic)
 - [x] Grabbing and storing data
-	- [ ] Deleting old files
+	- [x] Deleting old files
 - [ ] Creating user supplied database
 	- [x] Pings sent to seperate db in monitor
 	- [ ] Graphing data from db's (Or framework for furthur development)

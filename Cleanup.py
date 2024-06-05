@@ -34,12 +34,3 @@ def Clean():
 	if cleaned == True:
 		Logging.customLogging("Files cleaned", True)
 		cleaned = False
-
-	#For every file from yesterday
-	#for 
-	#	if os.path.exists(filePath):
-	#		os.remove(filePath)
-	#		Logging.customLogging("Files cleaned up")
-
-
-Clean()

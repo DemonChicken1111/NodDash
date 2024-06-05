@@ -1,10 +1,15 @@
 import Monitor
 import JSONImporter
 import Logging
+import Cleanup
 #import DBase
 import threading
 from time import sleep
 
+
+def current24HrTime():
+	t = datetime.datetime.now()
+	return t.strftime("%H:%M")
 
 def MonitorJob():
 
@@ -23,18 +28,26 @@ def LogJob():
 #		DBase.main():
 
 def DelJob():
-	
+
+	if current24HrTime() == "00:00":
+		sleept(30)
+		Cleanup.Clean()
+
+
 
 def main():
 
 	thread1 = threading.Thread(target=MonitorJob)
 	thread2 = threading.Thread(target=LogJob)
+	thread3 = threading.Thread(target=DelJob)
 
 	thread1.start()
 	thread2.start()
+	thread3.start()
 
 	thread1.join()
 	thread2.join()
+	thread3.join()
 
 if __name__ == "__main__":
 	main()
