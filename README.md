@@ -1,5 +1,7 @@
 # **NodDash**
- A Python backend utility for smart deployables in [Project Awakening](https://phase3.projectawakening.io/). 
+ <p style="text-align: center;">A Python backend utility for smart deployables in [Project Awakening](https://phase3.projectawakening.io/).</p>
+
+
 
  ![Project Awakening Logo](https://harbor-webapp.s3.us-east-2.amazonaws.com/projects/6/global/logo.png)
 
