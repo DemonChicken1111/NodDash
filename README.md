@@ -27,13 +27,23 @@
  - Hardware flexibility
 
 
- ## **INSTALLATION AND DEPLOYMENT**
+# **INSTALLATION AND DEPLOYMENT**
 
+ ### Clone or Download the repository
 
+ ### Installing on Windows 
 
+ ### Installling on Linux
 
+ ### Configuration 
 
-### TO-DO LIST
+ ### Deploying
+
+# SUBMITTING ISSUES
+
+# CONTRIBUTING 
+
+# TO-DO LIST
 
 - [x] JSONImporting
 - [x] Activity Monioring 
@@ -42,7 +52,7 @@
 - [x] Logging data (Basic)
 - [x] Grabbing and storing data
 	- [x] Deleting old files
-- [ ] Creating user supplied database
+- [ ] Creating user supplied database (Might not completet)
 	- [x] Pings sent to seperate db in monitor
 	- [ ] Graphing data from db's (Or framework for furthur development)
 - [x] Configuration Options / Easy code changes

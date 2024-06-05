@@ -252,6 +252,5 @@ image_13 = canvas.create_image(
 
 
 
-
 window.resizable(False, False)
 window.mainloop()
