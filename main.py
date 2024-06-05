@@ -22,6 +22,9 @@ def LogJob():
 #	while True:		
 #		DBase.main():
 
+def DelJob():
+	
+
 def main():
 
 	thread1 = threading.Thread(target=MonitorJob)
