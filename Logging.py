@@ -63,9 +63,9 @@ def streamTask(lock):
 		lock.acquire()
 		Logger.JSONStreamer()
 		lock.release()
-		print("Sleeping..")
+		#print("Sleeping..")
 		sleep(30)
-		print("Starting..")
+		#print("Starting..")
 		
 
 def logTask(lock):

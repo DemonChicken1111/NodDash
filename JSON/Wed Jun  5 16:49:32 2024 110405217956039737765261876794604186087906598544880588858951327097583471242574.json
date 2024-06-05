@@ -1,0 +1,40 @@
+{
+    "id": "110405217956039737765261876794604186087906598544880588858951327097583471242574",
+    "typeId": 83904,
+    "ownerId": "0xd3228eb704b888b89f3c275cee36cab94dd614f2",
+    "ownerName": "Gestalt 78IH95",
+    "chainId": 4541000,
+    "name": "Athens",
+    "description": "This unit is managed by the Extraction Protocol. It exchanges EVE token for Lens 3X. -- Claim your free first 10 $EVE here - https://dapps.projectawakening.io/faucet/index.html",
+    "dappUrl": "https://dapps.projectawakening.io/lens-seller/index.html?smartObjectId=110405217956039737765261876794604186087906598544880588858951327097583471242574",
+    "image": "",
+    "isOnline": false,
+    "stateId": 1,
+    "state": "Unanchored",
+    "anchoredAtTime": "1716483183",
+    "solarSystemId": 0,
+    "solarSystem": {
+        "solarSystemId": 0,
+        "solarSystemName": "",
+        "solarSystemNameId": 0
+    },
+    "region": "",
+    "locationX": 0,
+    "locationY": 0,
+    "locationZ": 0,
+    "floorPrice": "",
+    "fuel": {
+        "fuelAmount": 999999999999999999999,
+        "fuelConsumptionPerMin": 3600,
+        "fuelMaxCapacity": 100000000000,
+        "fuelUnitVolume": 100000000
+    },
+    "modules": null,
+    "inventory": {
+        "storageCapacity": 100000000000000,
+        "usedCapacity": 46419999988300,
+        "storageItems": [],
+        "ephemeralInventoryList": []
+    },
+    "gatekeeper": null
+}
