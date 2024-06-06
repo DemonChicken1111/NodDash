@@ -262,9 +262,12 @@ fig_1 = Figure(figsize=(2.3, 3.1), facecolor="#7DAEA3")
 ax_1 = fig_1.add_subplot()
 ax_1.scatter(x=df["time"], y=df["amount"], alpha=0.7)
 
+fig_2 = Figure()
+fig_3 = Figure()
+
 canvas = FigureCanvasTkAgg(figure=fig_1, master=window)
 canvas.draw()
-canvas.get_tk_widget().place(x=66, y=720)
+canvas.get_tk_widget().place(x=180, y=770)
 
-window.resizable(False, False)
+window.resizable(True, True)
 window.mainloop()
