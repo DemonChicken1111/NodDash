@@ -7,12 +7,13 @@ from pathlib import Path
 
 # from tkinter import *
 # Explicit imports to satisfy Flake8
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, tkk
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import pandas as pd
 from tinydb import TinyDB, Query
-
+import os.path
+import numpy as np
 
 
 OUTPUT_PATH = Path(__file__).parent
@@ -252,22 +253,32 @@ image_13 = canvas.create_image(
     image=image_image_13
 )
 
-db = TinyDB('pingdb.json')
+fpath = os.path.dirname(__file__) + '/../pingdb.json'
+db = TinyDB(fpath)
 result = db.all()
 df = pd.DataFrame(result)
-df["time"] = pd.to_datetime(df["time"])
-df["amount"] = df.agg({"amount": sum})
+h = df.groupby(["time"]).agg({"amount": "sum"}).reset_index()
+h["time"] = pd.to_datetime(h["time"])
 
-fig_1 = Figure(figsize=(2.3, 3.1), facecolor="#7DAEA3")
+#Creating Ping Bar Graph
+fig_1 = Figure(figsize=(4, 2.9), facecolor="#7DAEA3")
 ax_1 = fig_1.add_subplot()
-ax_1.scatter(x=df["time"], y=df["amount"], alpha=0.7)
+ax_1.bar(x=h["time"], height=h["amount"] ,width=0.1, linewidth=0.7)
+ax_1.tick_params(labelsize=7, colors="white")
+fig_1.autofmt_xdate()
+ax_1.grid(visible=True)
+ax_1.set_xlabel("time")
+ax_1.set_ylabel("pings")
 
 fig_2 = Figure()
 fig_3 = Figure()
 
-canvas = FigureCanvasTkAgg(figure=fig_1, master=window)
+#Creating Table
+table = ttk.Treeview(master=window, columns=df, show="headings")
+
+canvas = FigureCanvasTkAgg(fig_1, master=window)
 canvas.draw()
-canvas.get_tk_widget().place(x=180, y=770)
+canvas.get_tk_widget().place(x=110, y=723)
 
 window.resizable(True, True)
 window.mainloop()
