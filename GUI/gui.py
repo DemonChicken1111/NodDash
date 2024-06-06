@@ -8,8 +8,10 @@ from pathlib import Path
 # from tkinter import *
 # Explicit imports to satisfy Flake8
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
-import matplotlib
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import pandas as pd
+from tinydb import TinyDB, Query
 
 
 
@@ -250,7 +252,19 @@ image_13 = canvas.create_image(
     image=image_image_13
 )
 
+db = TinyDB('pingdb.json')
+result = db.all()
+df = pd.DataFrame(result)
+df["time"] = pd.to_datetime(df["time"])
+df["amount"] = df.agg({"amount": sum})
 
+fig_1 = Figure(figsize=(2.3, 3.1), facecolor="#7DAEA3")
+ax_1 = fig_1.add_subplot()
+ax_1.scatter(x=df["time"], y=df["amount"], alpha=0.7)
+
+canvas = FigureCanvasTkAgg(figure=fig_1, master=window)
+canvas.draw()
+canvas.get_tk_widget().place(x=66, y=720)
 
 window.resizable(False, False)
 window.mainloop()

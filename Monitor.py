@@ -72,10 +72,11 @@ def compareJSONFilesWithKeys(fileOnePath, fileTwoPath, keysToCompare):
 
             location = json1.get("solarSystem").get("solarSystemName")
             time = x.strftime("%c")
+            amount = 1
 
             #Could be issue if multiple empheralInventories are opened between intervals
             #Seems to be edge case though and willing to allow it for sake of time
-            db.insert({'time': time, 'location': location, 'key': key})
+            db.insert({'time': time, 'location': location, 'key': key, 'amount': amount})
 
 
     else:
