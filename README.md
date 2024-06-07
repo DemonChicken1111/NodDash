@@ -113,4 +113,4 @@ pip install -r requirements.txt
 - [x] Configuration Options / Easy code changes
 - [x] Dependancy setup script
 - [ ] Presentation + Docs
-- [ ] Make release and release branch
+- [x] Make release 
