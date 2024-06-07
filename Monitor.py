@@ -5,6 +5,7 @@ from time import sleep
 import os
 import Logging
 from tinydb import TinyDB, Query
+from colorama import Fore, Back, Style
 
 db = TinyDB('pingdb.json')
 x = datetime.datetime.now()
@@ -77,6 +78,7 @@ def compareJSONFilesWithKeys(fileOnePath, fileTwoPath, keysToCompare):
             #Could be issue if multiple empheralInventories are opened between intervals
             #Seems to be edge case though and willing to allow it for sake of time
             db.insert({'time': time, 'location': location, 'key': key, 'amount': amount})
+            print(Fore.RED + f"time: {time}, location: {location}, key val: {key}")
 
 
     else:

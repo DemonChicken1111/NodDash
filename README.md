@@ -21,9 +21,9 @@
  - Activity monitoring 
  - User configurable data extraction
  - Fully user controlled
- - Easy to use custom database 
- - Data visualization
- - GUI dashboard
+ - Easy to use custom databases
+ - Data visualization framework
+ - CLI 
  - Hardware flexibility
 
 
@@ -39,11 +39,7 @@
 
  ### Clone or Download the repository
 
- You can download the lastest release at the release pages (link here). Alternativly you can clone a release by using 
-
- ```
- git clone <URL to release branch>
- ```
+ You can download the lastest release at the [release pages](https://github.com/DemonChicken1111/NodDash/releases)
 
  ### Installing on Windows 
 
@@ -107,12 +103,13 @@ pip install -r requirements.txt
 - [x] Activity Monioring 
 	- [x] Integrate logging of updates
 - [x] UI
+	- [x] Convert to CLI
 - [x] Logging data (Basic)
 - [x] Grabbing and storing data
 	- [x] Deleting old files
-- [ ] Creating user supplied database (Might not completet)
+- [ ] ~~Creating user supplied database (Might not completet)~~
 	- [x] Pings sent to seperate db in monitor
-	- [ ] Graphing data from db's (Or framework for furthur development)
+	- [x] Graphing data from db's __(Or framework for furthur development)__
 - [x] Configuration Options / Easy code changes
 - [x] Dependancy setup script
 - [ ] Presentation + Docs
